@@ -1,0 +1,26 @@
+@import url('https://fonts.googleapis.com/css?family=Rubik:300,400,400i,500,700&subset=cyrillic');
+
+@import "base/_reset";
+@import "base/_variables";
+@import "base/_common";
+
+section {
+  &.main {
+    text-align: center;
+  }
+}
+
+.convert-image {
+  img {
+    max-width: 38px;
+  }
+}
+
+.simple-converter {
+  margin-top: 4em;
+  .intro {
+    p {
+      margin-bottom: 2em;
+    }
+  }
+}

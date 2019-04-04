@@ -1,0 +1,43 @@
+{% extends 'layout.html.twig' %}
+
+{% block main %}
+    <div class="simple-converter col-6 d-block mx-auto">
+        <div class="intro">
+            <h1>Convert</h1>
+            <p>Today's rates: {{ rates }}</p>
+        </div>
+
+        <div id="app">
+            <form class="basic-form" id="exchange-form">
+                <div class="row">
+
+                    <div class="input-group col-5 mb-3">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text">$</span>
+                        </div>
+
+                        <input type="number" id="currencyInput"
+                               class="form-control" placeholder="USD"
+                               @keyup="calculate_input_1" :value="input_value_2"
+                        >
+                    </div>
+
+                    <input type="hidden" id="currentRate" value="{{ rates }}">
+
+                    <div class="col-2 convert-image">
+                        <img src="/images/convert.svg" alt="">
+                    </div>
+
+                    <div class="input-group col-5 mb-3">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text">€</span>
+                        </div>
+                        <input type="number" class="form-control" placeholder="EUR" @keyup="calculate_input_2" :value="input_value_1"
+                               >
+                    </div>
+
+                </div>
+            </form>
+        </div>
+    </div>
+{% endblock %}
